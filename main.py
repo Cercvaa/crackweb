@@ -2,7 +2,12 @@ import io
 import os
 import base64
 import requests
+import pathlib
 from pathlib import Path
+
+if hasattr(pathlib, "WindowsPath") and hasattr(pathlib, "PosixPath"):
+    pathlib.WindowsPath = pathlib.PosixPath
+
 from typing import Tuple
 
 from fastapi import FastAPI, Request, UploadFile, File, Form
