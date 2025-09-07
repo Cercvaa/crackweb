@@ -5,3 +5,4 @@ python-multipart==0.0.9
 pillow==10.4.0
 fastai==2.8.3
 torch>=2.6
+uvicorn[standard]
